@@ -1,0 +1,203 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	text-align: center;
+	font-size: 12px;
+	margin-top: 3em;
+}
+
+button {
+	z-index: 100;
+	position: relative;
+	background: #ec2424;
+	border: 0;
+	color: #fff;
+	border-radius: 10px;
+	padding: 1em;
+	-webkit-transition: -webkit-transform 250ms ease;
+	transition: -webkit-transform 250ms ease;
+	-o-transition: transform 250ms ease;
+	transition: transform 250ms ease;
+	transition: transform 250ms ease, -webkit-transform 250ms ease;
+}
+button:hover {
+	background: #e31414;
+}
+button:focus {
+	outline: none;
+}
+button:active {
+	-webkit-transform: translate(0, 5%);
+	-ms-transform: translate(0, 5%);
+	transform: translate(0, 5%);
+}
+
+.svg-icon {
+	position: relative;
+	max-width: 400px;
+	width: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	position: absolute;
+	left: 50%;
+	top: 60%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.person {
+	width: 80%;
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	position: relative;
+	z-index: 1;
+}
+
+.person.is-ready {
+	-webkit-animation: tada 1s both;
+	animation: tada 1s both;
+}
+
+.person.disco {
+	-webkit-animation: pulse 1s infinite ease-in-out;
+	animation: pulse 1s infinite ease-in-out;
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+.sky-bg {
+	border: 6px solid #f1b521;
+	border-radius: 50%;
+	position: absolute;
+	width: 100%;
+	padding-bottom: 100%;
+	overflow: hidden;
+	-webkit-mask-image: -webkit-radial-gradient(white, black);
+	box-sizing: border-box;
+}
+
+.sky-bg img {
+	height: calc(100% + 12px);
+	position: absolute;
+	top: -6px;
+	display: block;
+	left: 0;
+}
+
+.sky-bg img:first-child {
+	-webkit-animation: bgScroll 12s infinite linear;
+	animation: bgScroll 12s infinite linear;
+	z-index: 1;
+	opacity: 0;
+}
+
+.sky-bg img:nth-child(2) {
+	-webkit-animation: bgScroll 12s 6s infinite linear;
+	animation: bgScroll 12s 6s infinite linear;
+	z-index: 1;
+	opacity: 0;
+}
+
+@-webkit-keyframes bgScroll {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+	1% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 1;
+	}
+	85% {
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateX(-90%);
+		transform: translateX(-90%);
+	}
+}
+
+@keyframes bgScroll {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+	1% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 1;
+	}
+	85% {
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateX(-90%);
+		transform: translateX(-90%);
+	}
+}
+
+@-webkit-keyframes tada {
+	0% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+	10%,
+	20% {
+		-webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+		transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+	}
+	30%,
+	50%,
+	70%,
+	90% {
+		-webkit-transform: scale3d(1.3, 1.3, 1.3) rotate3d(0, 0, 1, 3deg);
+		transform: scale3d(1.3, 1.3, 1.3) rotate3d(0, 0, 1, 3deg);
+	}
+	40%,
+	60%,
+	80% {
+		-webkit-transform: scale3d(1.3, 1.3, 1.3) rotate3d(0, 0, 1, -3deg);
+		transform: scale3d(1.3, 1.3, 1.3) rotate3d(0, 0, 1, -3deg);
+	}
+	100% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	50% {
+		-webkit-transform: scale(1.32);
+		transform: scale(1.32);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
